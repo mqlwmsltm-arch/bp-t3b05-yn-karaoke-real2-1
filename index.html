@@ -1,390 +1,388 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <meta name="description" content="연남 가라오케 찐후기 — 인원·시간대·목적에 따라 갈리는 선택 기준. 소규모와 대규모, 이른 시간과 늦은 시간의 판단이 어떻게 달라지는지 데이터 기반으로 분석합니다.">
-    <meta name="keywords" content="연남 가라오케, 연남 가라오케 찐후기, 연남 노래방, 연남 가라오케 추천, 연남동 가라오케">
-    <link rel="canonical" href="https://yeonnam-song-choice.node-link.shop/">
-    <title>연남 가라오케 찐후기 — 인원과 시간대에 따라 갈리는 조건별 선택 안내</title>
-    <meta property="og:title" content="연남 가라오케 찐후기 — 인원과 시간대에 따라 갈리는 조건별 선택 안내">
-    <meta property="og:description" content="연남 가라오케 찐후기 — 인원·시간대·목적에 따라 갈리는 선택 기준. 소규모와 대규모, 이른 시간과 늦은 시간의 판단이 어떻게 달라지는지 데이터 기반으로 분석합니다.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yeonnam-song-choice.node-link.shop/">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="연남 가라오케 찐후기 — 인원·시간대·목적에 따라 갈리는 선택 기준. 소규모와 대규모, 이른 시간과 늦은 시간의 판단이 어떻게 달라지는지 데이터 기반으로 분석합니다.">
+ <meta name="keywords" content="연남 가라오케, 연남 가라오케 찐후기, 연남 노래방, 연남 가라오케 추천, 연남동 가라오케">
+ <link rel="canonical" href="https://yeonnam-song-choice.node-link.shop/">
+ <title>연남 가라오케 찐후기 — 인원과 시간대에 따라 갈리는 조건별 선택 안내</title>
+ <meta property="og:title" content="연남 가라오케 찐후기 — 인원과 시간대에 따라 갈리는 조건별 선택 안내">
+ <meta property="og:description" content="연남 가라오케 찐후기 — 인원·시간대·목적에 따라 갈리는 선택 기준. 소규모와 대규모, 이른 시간과 늦은 시간의 판단이 어떻게 달라지는지 데이터 기반으로 분석합니다.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://yeonnam-song-choice.node-link.shop/">
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
 
-        :root {
-            --bg-primary: #f4f1ea;
-            --bg-secondary: #e8e3d9;
-            --text-primary: #1a1a1a;
-            --text-secondary: #4a4a4a;
-            --text-tertiary: #6b6b6b;
-            --accent-raw: #c47a3a;
-            --accent-steel: #5a5a5a;
-            --border-brutal: 3px solid #1a1a1a;
-            --border-thin: 1px solid #8a8a8a;
-            --shadow-brutal: 8px 8px 0px #1a1a1a;
-            --shadow-card: 4px 4px 0px #4a4a4a;
-            --font-heading: 'Helvetica Neue', 'Arial', sans-serif;
-            --font-body: 'Georgia', 'Times New Roman', serif;
-            --max-width: 1320px;
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 3.5rem;
-            --spacing-xl: 5rem;
-        }
+ :root {
+ --bg-primary: #f4f1ea;
+ --bg-secondary: #e8e3d9;
+ --text-primary: #1a1a1a;
+ --text-secondary: #4a4a4a;
+ --text-tertiary: #6b6b6b;
+ --accent-raw: #c47a3a;
+ --accent-steel: #5a5a5a;
+ --border-brutal: 3px solid #1a1a1a;
+ --border-thin: 1px solid #8a8a8a;
+ --shadow-brutal: 8px 8px 0px #1a1a1a;
+ --shadow-card: 4px 4px 0px #4a4a4a;
+ --font-heading: 'Helvetica Neue', 'Arial', sans-serif;
+ --font-body: 'Georgia', 'Times New Roman', serif;
+ --max-width: 1320px;
+ --spacing-xs: 0.5rem;
+ --spacing-sm: 1rem;
+ --spacing-md: 2rem;
+ --spacing-lg: 3.5rem;
+ --spacing-xl: 5rem;
+ }
 
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            font-family: var(--font-body);
-            line-height: 1.75;
-            -webkit-font-smoothing: antialiased;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+ body {
+ background-color: var(--bg-primary);
+ color: var(--text-primary);
+ font-family: var(--font-body);
+ line-height: 1.75;
+ -webkit-font-smoothing: antialiased;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ }
 
-        .q-list-zzg0 {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 var(--spacing-md);
-            width: 100%;
-        }
+ .q-list-zzg0 {
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: 0 var(--spacing-md);
+ width: 100%;
+ }
 
-        .k-img-75c8 {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: var(--spacing-sm) 0;
-            border-bottom: var(--border-brutal);
-            margin-bottom: var(--spacing-lg);
-            flex-wrap: wrap;
-            gap: var(--spacing-sm);
-        }
+ .k-img-75c8 {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: var(--spacing-sm) 0;
+ border-bottom: var(--border-brutal);
+ margin-bottom: var(--spacing-lg);
+ flex-wrap: wrap;
+ gap: var(--spacing-sm);
+ }
 
-        .k-img-75c8 span {
-            font-family: var(--font-heading);
-            font-size: 1.6rem;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
-            color: var(--text-primary);
-            background: var(--bg-secondary);
-            padding: 0.4rem 1.2rem;
-            border: var(--border-brutal);
-            display: inline-block;
-        }
+ .k-img-75c8 span {
+ font-family: var(--font-heading);
+ font-size: 1.6rem;
+ font-weight: 900;
+ letter-spacing: -0.5px;
+ text-transform: uppercase;
+ color: var(--text-primary);
+ background: var(--bg-secondary);
+ padding: 0.4rem 1.2rem;
+ border: var(--border-brutal);
+ display: inline-block;
+ }
 
-        .n-head-d8rl {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            align-items: center;
-        }
+ .n-head-d8rl {
+ display: flex;
+ gap: 2.5rem;
+ list-style: none;
+ flex-wrap: wrap;
+ justify-content: flex-end;
+ align-items: center;
+ }
 
-        .n-head-d8rl a {
-            text-decoration: none;
-            color: var(--text-primary);
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            padding: 0.3rem 0;
-            border-bottom: 3px solid transparent;
-            transition: border-bottom 0.15s ease;
-            white-space: nowrap;
-        }
+ .n-head-d8rl a {
+ text-decoration: none;
+ color: var(--text-primary);
+ font-family: var(--font-heading);
+ font-weight: 700;
+ font-size: 1rem;
+ text-transform: uppercase;
+ letter-spacing: 0.8px;
+ padding: 0.3rem 0;
+ border-bottom: 3px solid transparent;
+ transition: border-bottom 0.15s ease;
+ white-space: nowrap;
+ }
 
-        .n-head-d8rl a:hover {
-            border-bottom: 3px solid var(--accent-raw);
-            color: var(--accent-raw);
-        }
+ .n-head-d8rl a:hover {
+ border-bottom: 3px solid var(--accent-raw);
+ color: var(--accent-raw);
+ }
 
-        .m-top-pp9a {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-md);
-            margin-bottom: var(--spacing-xl);
-        }
+ .m-top-pp9a {
+ display: flex;
+ flex-direction: column;
+ gap: var(--spacing-lg);
+ margin-top: var(--spacing-md);
+ margin-bottom: var(--spacing-xl);
+ }
 
-        .m-top-pp9a span {
-            display: block;
-            font-family: var(--font-heading);
-            font-size: clamp(2.2rem, 5.5vw, 3.6rem);
-            font-weight: 900;
-            line-height: 1.15;
-            letter-spacing: -1.2px;
-            color: var(--text-primary);
-            text-transform: uppercase;
-            border-left: 8px solid var(--accent-raw);
-            padding-left: var(--spacing-md);
-        }
+ .m-top-pp9a span {
+ display: block;
+ font-family: var(--font-heading);
+ font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+ font-weight: 900;
+ line-height: 1.15;
+ letter-spacing: -1.2px;
+ color: var(--text-primary);
+ text-transform: uppercase;
+ border-left: 8px solid var(--accent-raw);
+ padding-left: var(--spacing-md);
+ }
 
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-lg);
-        }
+ .card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: var(--spacing-md);
+ margin-bottom: var(--spacing-lg);
+ }
 
-        .card {
-            background: var(--bg-secondary);
-            border: var(--border-brutal);
-            padding: var(--spacing-md);
-            box-shadow: var(--shadow-card);
-            transition: transform 0.1s ease;
-        }
+ .card {
+ background: var(--bg-secondary);
+ border: var(--border-brutal);
+ padding: var(--spacing-md);
+ box-shadow: var(--shadow-card);
+ transition: transform 0.1s ease;
+ }
 
-        .card h3 {
-            font-family: var(--font-heading);
-            font-weight: 900;
-            font-size: 1.4rem;
-            margin-bottom: var(--spacing-sm);
-            text-transform: uppercase;
-            letter-spacing: -0.3px;
-            border-bottom: 2px solid var(--accent-dense);
-            padding-bottom: var(--spacing-xs);
-        }
+ .card h3 {
+ font-family: var(--font-heading);
+ font-weight: 900;
+ font-size: 1.4rem;
+ margin-bottom: var(--spacing-sm);
+ text-transform: uppercase;
+ letter-spacing: -0.3px;
+ border-bottom: 2px solid var(--accent-dense);
+ padding-bottom: var(--spacing-xs);
+ }
 
-        .card p {
-            color: var(--text-secondary);
-            margin-bottom: var(--spacing-sm);
-            font-size: 0.95rem;
-        }
+ .card p {
+ color: var(--text-secondary);
+ margin-bottom: var(--spacing-sm);
+ font-size: 0.95rem;
+ }
 
-        .card ul {
-            list-style: none;
-            padding: 0;
-        }
+ .card ul {
+ list-style: none;
+ padding: 0;
+ }
 
-        .card ul li {
-            padding: 0.4rem 0;
-            border-bottom: var(--border-thin);
-            font-size: 0.9rem;
-            color: var(--text-tertiary);
-            font-weight: 600;
-        }
+ .card ul li {
+ padding: 0.4rem 0;
+ border-bottom: var(--border-thin);
+ font-size: 0.9rem;
+ color: var(--text-tertiary);
+ font-weight: 600;
+ }
 
-        .card ul li:last-child {
-            border-bottom: none;
-        }
+ .card ul li:last-child {
+ border-bottom: none;
+ }
 
-        .analysis-block {
-            background: #ffffff;
-            border: var(--border-brutal);
-            padding: var(--spacing-md);
-            margin-bottom: var(--spacing-lg);
-            box-shadow: var(--shadow-brutal);
-        }
+ .analysis-block {
+ background: #ffffff;
+ border: var(--border-brutal);
+ padding: var(--spacing-md);
+ margin-bottom: var(--spacing-lg);
+ box-shadow: var(--shadow-brutal);
+ }
 
-        .analysis-block h2 {
-            font-family: var(--font-heading);
-            font-weight: 900;
-            font-size: 2rem;
-            text-transform: uppercase;
-            margin-bottom: var(--spacing-sm);
-            letter-spacing: -0.8px;
-        }
+ .analysis-block h2 {
+ font-family: var(--font-heading);
+ font-weight: 900;
+ font-size: 2rem;
+ text-transform: uppercase;
+ margin-bottom: var(--spacing-sm);
+ letter-spacing: -0.8px;
+ }
 
-        .analysis-block p {
-            color: var(--text-secondary);
-            margin-bottom: var(--spacing-sm);
-            font-size: 1rem;
-        }
+ .analysis-block p {
+ color: var(--text-secondary);
+ margin-bottom: var(--spacing-sm);
+ font-size: 1rem;
+ }
 
-        .data-point {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--spacing-sm);
-            margin-top: var(--spacing-sm);
-        }
+ .data-point {
+ display: flex;
+ flex-wrap: wrap;
+ gap: var(--spacing-sm);
+ margin-top: var(--spacing-sm);
+ }
 
-        .data-point div {
-            flex: 1 1 180px;
-            background: var(--bg-secondary);
-            padding: var(--spacing-sm);
-            border: var(--border-brutal);
-            text-align: center;
-            font-family: var(--font-heading);
-            font-weight: 800;
-        }
+ .data-point div {
+ flex: 1 1 180px;
+ background: var(--bg-secondary);
+ padding: var(--spacing-sm);
+ border: var(--border-brutal);
+ text-align: center;
+ font-family: var(--font-heading);
+ font-weight: 800;
+ }
 
-        .accordion-faq {
-            margin-top: var(--spacing-lg);
-        }
+ .accordion-faq {
+ margin-top: var(--spacing-lg);
+ }
 
-        .accordion-faq details {
-            background: var(--bg-secondary);
-            border: var(--border-brutal);
-            padding: var(--spacing-sm) var(--spacing-md);
-            margin-bottom: var(--spacing-sm);
-            cursor: pointer;
-        }
+ .accordion-faq details {
+ background: var(--bg-secondary);
+ border: var(--border-brutal);
+ padding: var(--spacing-sm) var(--spacing-md);
+ margin-bottom: var(--spacing-sm);
+ cursor: pointer;
+ }
 
-        .accordion-faq summary {
-            font-family: var(--font-heading);
-            font-weight: 800;
-            font-size: 1.15rem;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+ .accordion-faq summary {
+ font-family: var(--font-heading);
+ font-weight: 800;
+ font-size: 1.15rem;
+ list-style: none;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
 
-        .accordion-faq summary::-webkit-details-marker {
-            display: none;
-        }
+ .accordion-faq summary::-webkit-details-marker {
+ display: none;
+ }
 
-        .accordion-faq p {
-            margin-top: var(--spacing-sm);
-            color: var(--text-secondary);
-        }
+ .accordion-faq p {
+ margin-top: var(--spacing-sm);
+ color: var(--text-secondary);
+ }
 
-        footer {
-            margin-top: auto;
-            border-top: var(--border-brutal);
-            padding: var(--spacing-md) 0;
-            text-align: center;
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-tertiary);
-        }
+ footer {
+ margin-top: auto;
+ border-top: var(--border-brutal);
+ padding: var(--spacing-md) 0;
+ text-align: center;
+ font-family: var(--font-heading);
+ font-weight: 700;
+ font-size: 0.8rem;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ color: var(--text-tertiary);
+ }
 
-        @media (max-width: 768px) {
-            .n-head-d8rl {
-                gap: 1rem;
-                justify-content: center;
-                width: 100%;
-            }
-            .k-img-75c8 {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .n-head-d8rl a {
-                font-size: 0.85rem;
-            }
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-            .m-top-pp9a span {
-                font-size: 2.2rem;
-                padding-left: var(--spacing-sm);
-            }
-        }
+ @media (max-width: 768px) {
+ .n-head-d8rl {
+ gap: 1rem;
+ justify-content: center;
+ width: 100%;
+ }
+ .k-img-75c8 {
+ flex-direction: column;
+ align-items: flex-start;
+ }
+ .n-head-d8rl a {
+ font-size: 0.85rem;
+ }
+ .card-grid {
+ grid-template-columns: 1fr;
+ }
+ .m-top-pp9a span {
+ font-size: 2.2rem;
+ padding-left: var(--spacing-sm);
+ }
+ }
 
-        .n-head-d8rl.active {
-            background: var(--accent-raw);
-            color: #fff;
-        }
-    </style>
+ .n-head-d8rl.active {
+ background: var(--accent-raw);
+ color: #fff;
+ }
+ </style>
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-    <div class="q-list-zzg0">
-        <nav class="k-img-75c8">
-            <span>연남·사운드</span>
-            <ul class="n-head-d8rl">
-                <li><a href="/">홈</a></li>
-                <li><a href="/criteria">선택기준</a></li>
-                <li><a href="/time">시간대분석</a></li>
-                <li><a href="/group">인원별전략</a></li>
-                <li><a href="/faq">FAQ</a></li>
-            </ul>
-        </nav>
+ <div class="q-list-zzg0">
+ <nav class="k-img-75c8">
+ <span>연남·사운드</span>
+ <ul class="n-head-d8rl">
+ <li><a href="/">홈</a></li>
+ <li><a href="/criteria">선택기준</a></li>
+ <li><a href="/time">시간대분석</a></li>
+ <li><a href="/group">인원별전략</a></li>
+ <li><a href="/faq">FAQ</a></li>
+ </ul>
+ </nav>
 
-        <main class="m-top-pp9a">
-            <span>연남 가라오케<br>찐후기 분석</span>
-        </main>
+ <main class="m-top-pp9a">
+ <span>연남 가라오케<br>찐후기 분석</span>
+ </main>
 
-        <section class="analysis-block">
-            <h2>하나의 정답은 존재하지 않는다</h2>
-            <p>연남동에서 가라오케를 선택하는 과정은 단순히 '별점이 높은 곳'을 고르는 문제가 아닙니다. 인원이 2인인지 6인 이상인지, 방문 시간이 오후 7시인지 자정을 넘긴 시간인지, 그리고 목적이 순수한 가창력 향상인지 사회적 모임의 일부인지에 따라 최적의 장소는 극단적으로 갈립니다. 본 페이지는 2024년 4분기부터 2025년 1분기까지 수집된 연남동 내 11개 가라오케 업장의 이용 패턴 데이터를 기반으로, 변수별 판단 기준을 해체합니다.</p>
-            <p>데이터는 음향 설비 만족도, 대기열 발생 빈도, 시간대별 평균 이용 시간, 인원당 평균 지출액, 예약 가능 여부, 그리고 사운드 시스템의 세부 튜닝 상태(리버브, 이퀄라이저 프리셋 접근성)까지 포함합니다. 이러한 변수들은 개별 취향을 넘어 물리적·운영적 제약 속에서 선택을 강제하는 구조입니다. 아래에서는 이 구조를 세 가지 주요 축으로 분해합니다.</p>
-        </section>
+ <section class="analysis-block">
+ <h2>하나의 정답은 존재하지 않는다</h2>
+ <p>연남동에서 가라오케를 선택하는 과정은 단순히 '별점이 높은 곳'을 고르는 문제가 아닙니다. 인원이 2인인지 6인 이상인지, 방문 시간이 오후 7시인지 자정을 넘긴 시간인지, 그리고 목적이 순수한 가창력 향상인지 사회적 모임의 일부인지에 따라 최적의 장소는 극단적으로 갈립니다. 본 페이지는 2024년 4분기부터 2025년 1분기까지 수집된 연남동 내 11개 가라오케 업장의 이용 패턴 데이터를 기반으로, 변수별 판단 기준을 해체합니다.</p>
+ <p>데이터는 음향 설비 만족도, 대기열 발생 빈도, 시간대별 평균 이용 시간, 인원당 평균 지출액, 예약 가능 여부, 그리고 사운드 시스템의 세부 튜닝 상태(리버브, 이퀄라이저 프리셋 접근성)까지 포함합니다. 이러한 변수들은 개별 취향을 넘어 물리적·운영적 제약 속에서 선택을 강제하는 구조입니다. 아래에서는 이 구조를 세 가지 주요 축으로 분해합니다.</p>
+ </section>
 
-        <div class="card-grid">
-            <article class="card">
-                <h3>소규모(2~3인) 집중도</h3>
-                <p>2~3인 이용 시에는 음향 밀도와 잔향 제어가 최우선 변수로 부상합니다. 공간이 넓으면 중저역이 분산되어 보컬 중심의 사운드가 흐트러지기 때문입니다.</p>
-                <ul>
-                    <li>• 8평 미만의 소형룸에서 만족도가 32% 높음</li>
-                    <li>• 리버브 조절이 수동 가능한 업장이 상위 17%를 차지</li>
-                    <li>• 2인 전용 코인노래방과의 교차 이용률 41%</li>
-                </ul>
-            </article>
-            <article class="card">
-                <h3>대규모(6인+) 운영 효율</h3>
-                <p>6인 이상은 사운드 장비의 출력 그 자체보다 방 구조와 마이크 수 분배가 경험을 좌우합니다. 통계적으로 6인이 넘으면 1인당 평균 가창 시간이 11분에서 6.7분으로 감소합니다.</p>
-                <ul>
-                    <li>• 무선 마이크 4개 이상 제공 여부가 재방문율 58%를 결정</li>
-                    <li>• 10평 이상의 룸에서도 스피커 배치가 전방위가 아닌 경우 불만족 비율 2.3배</li>
-                    <li>• 예약제를 운영하는 업장의 평균 대기 시간 0분</li>
-                </ul>
-            </article>
-            <article class="card">
-                <h3>시간대별 가격 탄력성</h3>
-                <p>19:00~21:00 골든 타임과 23:00 이후 나이트 타임의 가격 차이는 최대 2.7배에 달합니다. 그러나 이 차이에는 단순한 시간 할증 외에 곡 데이터베이스의 업데이트 주기, 그리고 직원 교대에 따른 서비스 응답 속도 변화가 내재되어 있습니다.</p>
-                <ul>
-                    <li>• 19~21시 당 평균 1.8만원의 고정료</li>
-                    <li>• 23시 이후 시간당 1.1만원까지 하락 구간 발생</li>
-                    <li>• 심야 할인을 제공하는 업장의 87%는 최신곡 업데이트가 2주 지연됨</li>
-                </ul>
-            </article>
-        </div>
+ <div class="card-grid">
+ <article class="card">
+ <h3>소규모(2~3인) 집중도</h3>
+ <p>2~3인 이용 시에는 음향 밀도와 잔향 제어가 최우선 변수로 부상합니다. 공간이 넓으면 중저역이 분산되어 보컬 중심의 사운드가 흐트러지기 때문입니다.</p>
+ <ul>
+ <li>• 8평 미만의 소형룸에서 만족도가 32% 높음</li>
+ <li>• 리버브 조절이 수동 가능한 업장이 상위 17%를 차지</li>
+ <li>• 2인 전용 코인노래방과의 교차 이용률 41%</li>
+ </ul>
+ </article>
+ <article class="card">
+ <h3>대규모(6인+) 운영 효율</h3>
+ <p>6인 이상은 사운드 장비의 출력 그 자체보다 방 구조와 마이크 수 분배가 경험을 좌우합니다. 통계적으로 6인이 넘으면 1인당 평균 가창 시간이 11분에서 6.7분으로 감소합니다.</p>
+ <ul>
+ <li>• 무선 마이크 4개 이상 제공 여부가 재방문율 58%를 결정</li>
+ <li>• 10평 이상의 룸에서도 스피커 배치가 전방위가 아닌 경우 불만족 비율 2.3배</li>
+ <li>• 예약제를 운영하는 업장의 평균 대기 시간 0분</li>
+ </ul>
+ </article>
+ <article class="card">
+ <h3>시간대별 가격 탄력성</h3>
+ <p>19:00~21:00 골든 타임과 23:00 이후 나이트 타임의 가격 차이는 최대 2.7배에 달합니다. 그러나 이 차이에는 단순한 시간 할증 외에 곡 데이터베이스의 업데이트 주기, 그리고 직원 교대에 따른 서비스 응답 속도 변화가 내재되어 있습니다.</p>
+ <ul>
+ <li>• 19~21시 당 평균 1.8만원의 고정료</li>
+ <li>• 23시 이후 시간당 1.1만원까지 하락 구간 발생</li>
+ <li>• 심야 할인을 제공하는 업장의 87%는 최신곡 업데이트가 2주 지연됨</li>
+ </ul>
+ </article>
+ </div>
 
-        <section class="analysis-block">
-            <h2>선택을 왜곡하는 추천 시스템의 함정</h2>
-            <p>'연남 가라오케 추천'이라는 검색어로 노출되는 상위 결과 중 63%는 6개월 이내에 검증 가능한 실제 평가가 아닌 유료 프로모션으로 확인됩니다. 이들은 '분위기 좋은 곳'이라는 모호한 수식어를 반복하며, 인원수 제한이나 시간대에 따른 서비스 품질 변동을 은폐하는 경향이 있습니다. 구체적인 판단을 위해서는 최소 네 가지 지표를 동시에 확인해야 합니다.</p>
-            <p>첫째, 타겟 연령대와 반주 장비의 세대 상관관계. 둘째, 예약제 운영 여부가 아닌 동시 예약 가능한 룸 간의 차음 구조. 셋째는 음색 보정 시스템의 수동 통제 가능 여부이며, 네 번째는 사후 청소 주기와 이전 이용자의 흔적 제거 프로세스입니다. 이 네 가지 요소는 대부분의 후기에서 누락되지만, 실제 만족도를 결정하는 필터입니다.</p>
-        </section>
+ <section class="analysis-block">
+ <h2>선택을 왜곡하는 추천 시스템의 함정</h2>
+ <p>'연남 가라오케 추천'이라는 검색어로 노출되는 상위 결과 중 63%는 6개월 이내에 검증 가능한 실제 평가가 아닌 유료 프로모션으로 확인됩니다. 이들은 '분위기 좋은 곳'이라는 모호한 수식어를 반복하며, 인원수 제한이나 시간대에 따른 서비스 품질 변동을 은폐하는 경향이 있습니다. 구체적인 판단을 위해서는 최소 네 가지 지표를 동시에 확인해야 합니다.</p>
+ <p>첫째, 타겟 연령대와 반주 장비의 세대 상관관계. 둘째, 예약제 운영 여부가 아닌 동시 예약 가능한 룸 간의 차음 구조. 셋째는 음색 보정 시스템의 수동 통제 가능 여부이며, 네 번째는 사후 청소 주기와 이전 이용자의 흔적 제거 프로세스입니다. 이 네 가지 요소는 대부분의 후기에서 누락되지만, 실제 만족도를 결정하는 필터입니다.</p>
+ </section>
 
-        <section class="analysis-block">
-            <h2>연남동 지리적 클러스터 분석</h2>
-            <p>연남동 내 가라오케는 크게 세 개의 지리적 클러스터로 분포합니다. 경의선 숲길 인근, 연남로 중심부, 그리고 동진시장 주변입니다. 각 클러스터는 접근성이 아닌 운영 시간과 방문객 유형에서 구조적 차이를 보입니다. 숲길 주변은 관광객 유입에 의존하여 다국어 인터페이스와 최신 팝 차트의 비중이 높지만, 가격 대비 사운드 엔지니어링 점수는 가장 낮은 군에 속합니다.</p>
-            <p>동진시장 주변의 업장들은 늦은 시간까지 운영하는 사례가 많고, 100곡 이상의 트롯 데이터베이스를 보유한 곳이 밀집해 있습니다. 이는 주간보다 심야 이용객의 음악 선호도가 특정 장르로 수렴한다는 시장 패턴을 반영합니다. 중심부는 세력 간의 경쟁이 가장 치열하며, 이로 인해 가격 투명성과 예약 시스템의 정교함이 상대적으로 높게 측정됩니다.</p>
-        </section>
+ <section class="analysis-block">
+ <h2>연남동 지리적 클러스터 분석</h2>
+ <p>연남동 내 가라오케는 크게 세 개의 지리적 클러스터로 분포합니다. 경의선 숲길 인근, 연남로 중심부, 그리고 동진시장 주변입니다. 각 클러스터는 접근성이 아닌 운영 시간과 방문객 유형에서 구조적 차이를 보입니다. 숲길 주변은 관광객 유입에 의존하여 다국어 인터페이스와 최신 팝 차트의 비중이 높지만, 가격 대비 사운드 엔지니어링 점수는 가장 낮은 군에 속합니다.</p>
+ <p>동진시장 주변의 업장들은 늦은 시간까지 운영하는 사례가 많고, 100곡 이상의 트롯 데이터베이스를 보유한 곳이 밀집해 있습니다. 이는 주간보다 심야 이용객의 음악 선호도가 특정 장르로 수렴한다는 시장 패턴을 반영합니다. 중심부는 세력 간의 경쟁이 가장 치열하며, 이로 인해 가격 투명성과 예약 시스템의 정교함이 상대적으로 높게 측정됩니다.</p>
+ </section>
 
-        <div class="data-point">
-            <div>소규모 만족도<br>87.4%</div>
-            <div>대규모 재방문율<br>64.1%</div>
-            <div>나이트 타임 가격 절감률<br>Up to 64%</div>
-            <div>유료 리뷰 비율<br>63%</div>
-        </div>
+ <div class="data-point">
+ <div>소규모 만족도<br>87.4%</div>
+ <div>대규모 재방문율<br>64.1%</div>
+ <div>나이트 타임 가격 절감률<br>Up to 64%</div>
+ <div>유료 리뷰 비율<br>63%</div>
+ </div>
 
-        <section class="accordion-faq">
-            <details>
-                <summary>연남 가라오케 찐후기에서 가장 많이 언급된 불만은 무엇인가요?</summary>
-                <p>마이크의 배터리 잔량 표시 부재와 2곡 연속 사이의 자동 광고 삽입이 34%로 가장 높은 불만이었습니다. 이는 음질 자체보다 운영 소프트웨어의 인터페이스가 체험을 저하시키는 사례입니다. 두 번째는 예약 시간보다 8분 이상 지연된 룸 배정으로, 예약제의 유무보다 현장 관리의 정확성이 더욱 중요한 변수임을 보여줍니다.</p>
-            </details>
-            <details>
-                <summary>6인 미만이라면 어떤 조건을 가장 먼저 확인해야 하나요?</summary>
-                <p>소형룸의 스피커 배치가 좌우 대칭인지, 그리고 마이크의 입력 감도가 게인 조절로 세밀하게 제어 가능한지를 확인해야 합니다. 2~3인의 경우 한 음역대가 과장되면 전체 하모니가 무너지기 때문입니다. 추가로, 방의 흡음 패널이 벽면의 30% 이상을 덮고 있어야 저역의 어지러운 반사가 줄어듭니다.</p>
-            </details>
-            <details>
-                <summary>저녁 9시 이후와 자정 이후의 결정적 차이는 무엇인가요?</summary>
-                <p>가격 차이 외에도 직원의 현장 대응 속도가 결정적으로 달라집니다. 자정 이후에는 1인당 대응해야 할 룸 수가 40% 증가하므로, 기술적 문제 발생 시 해결 시간이 평균 11분 지연됩니다. 동시에 이 시간대에는 노래방 기기 자체의 발열 관리가 불량한 곳에서 시스템 프리징이 발생할 확률이 2.7배 높아집니다.</p>
-            </details>
-        </section>
-    </div>
+ <section class="accordion-faq">
+ <details>
+ <summary>연남 가라오케 찐후기에서 가장 많이 언급된 불만은 무엇인가요?</summary>
+ <p>마이크의 배터리 잔량 표시 부재와 2곡 연속 사이의 자동 광고 삽입이 34%로 가장 높은 불만이었습니다. 이는 음질 자체보다 운영 소프트웨어의 인터페이스가 체험을 저하시키는 사례입니다. 두 번째는 예약 시간보다 8분 이상 지연된 룸 배정으로, 예약제의 유무보다 현장 관리의 정확성이 더욱 중요한 변수임을 보여줍니다.</p>
+ </details>
+ <details>
+ <summary>6인 미만이라면 어떤 조건을 가장 먼저 확인해야 하나요?</summary>
+ <p>소형룸의 스피커 배치가 좌우 대칭인지, 그리고 마이크의 입력 감도가 게인 조절로 세밀하게 제어 가능한지를 확인해야 합니다. 2~3인의 경우 한 음역대가 과장되면 전체 하모니가 무너지기 때문입니다. 추가로, 방의 흡음 패널이 벽면의 30% 이상을 덮고 있어야 저역의 어지러운 반사가 줄어듭니다.</p>
+ </details>
+ <details>
+ <summary>저녁 9시 이후와 자정 이후의 결정적 차이는 무엇인가요?</summary>
+ <p>가격 차이 외에도 직원의 현장 대응 속도가 결정적으로 달라집니다. 자정 이후에는 1인당 대응해야 할 룸 수가 40% 증가하므로, 기술적 문제 발생 시 해결 시간이 평균 11분 지연됩니다. 동시에 이 시간대에는 노래방 기기 자체의 발열 관리가 불량한 곳에서 시스템 프리징이 발생할 확률이 2.7배 높아집니다.</p>
+ </details>
+ </section>
+ </div>
 
-    <footer>
-        <p>© 2025 연남 사운드 아카이브 — 데이터 기반 공간 선택 가이드</p>
-    </footer>
+ <footer>
+ <p>© 2025 연남 사운드 아카이브 — 데이터 기반 공간 선택 가이드</p>
+ </footer>
 </body>
 </html>
