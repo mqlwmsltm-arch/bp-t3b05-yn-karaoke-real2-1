@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b05-yn-karaoke-real2-1</title>
+  <meta name="description" content="t3b05-yn-karaoke-real2-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://yeonnam-song-choice.node-link.shop/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ body {
+ font-family: 'Noto Sans KR', sans-serif;
+ background-color: #07070e;
+ color: #f2f2ff;
+ line-height: 1.7;
+ -webkit-font-smoothing: antialiased;
+ overflow-x: hidden;
+ }
+ .v-ico-951n {
+ max-width: 760px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+ /* 타이포 */
+ h1, h2, h3, .r-img-uytk, .route-badge span {
+ font-family: 'Barlow Condensed', 'Noto Sans KR', sans-serif;
+ text-transform: uppercase;
+ letter-spacing: 0.06em;
+ font-weight: 700;
+ }
+ h1 {
+ font-size: clamp(3.2rem, 8vw, 5.2rem);
+ line-height: 1.05;
+ color: #ffffff;
+ }
+ h2 {
+ font-size: clamp(2rem, 5vw, 2.8rem);
+ margin-bottom: 24px;
+ border-bottom: 3px solid #7c3aed;
+ display: inline-block;
+ padding-bottom: 6px;
+ }
+ h3 {
+ font-size: 1.4rem;
+ margin-bottom: 12px;
+ color: #e0e0ff;
+ }
+ p {
+ margin-bottom: 24px;
+ font-size: 1.05rem;
+ color: #d0d0e8;
+ }
+ .v-main-if6w::first-letter {
+ font-size: 3.5rem;
+ float: left;
+ font-weight: 700;
+ line-height: 1;
+ margin-right: 12px;
+ margin-top: 4px;
+ color: #7c3aed;
+ font-family: 'Barlow Condensed', sans-serif;
+ }
+ /* 네비게이션 */
+ .v-foot-1nss {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 24px 0;
+ border-bottom: 1px solid rgba(242, 242, 255, 0.08);
+ }
+ .v-ico-0o3k {
+ font-family: 'Barlow Condensed', sans-serif;
+ font-size: 1.6rem;
+ font-weight: 700;
+ letter-spacing: 0.08em;
+ color: #fff;
+ text-decoration: none;
+ text-transform: uppercase;
+ }
+ .m-top-34wz {
+ display: flex;
+ gap: 36px;
+ }
+ .m-top-34wz a {
+ color: #c0c0e0;
+ text-decoration: none;
+ font-size: 0.9rem;
+ font-weight: 500;
+ letter-spacing: 0.04em;
+ text-transform: uppercase;
+ transition: color 0.2s;
+ }
+ .m-top-34wz a:hover {
+ color: #7c3aed;
+ }
+ /* 햄버거 */
+ .n-body-i3ji {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ background: none;
+ border: none;
+ cursor: pointer;
+ }
+ .n-body-i3ji span {
+ width: 26px;
+ height: 2px;
+ background: #f2f2ff;
+ display: block;
+ transition: 0.3s;
+ }
+ @media (max-width: 768px) {
+ .m-top-34wz {
+ display: none;
+ flex-direction: column;
+ position: absolute;
+ top: 70px;
+ right: 20px;
+ background: #0a0a14;
+ padding: 24px;
+ border: 1px solid #2a2a3a;
+ border-radius: 4px;
+ gap: 18px;
+ z-index: 10;
+ }
+ .m-top-34wz.active {
+ display: flex;
+ }
+ .n-body-i3ji {
+ display: flex;
+ }
+ }
+ /* 히어로 */
+ .m-btn-ywyz {
+ padding: 80px 0 60px;
+ background: radial-gradient(circle at 30% 20%, #1a1035 0%, #07070e 70%);
+ border-bottom: 1px solid #2a2a3a;
+ }
+ .m-btn-ywyz h1 {
+ margin-bottom: 18px;
+ }
+ .m-btn-ywyz p {
+ font-size: 1.2rem;
+ color: #b0b0d0;
+ max-width: 580px;
+ }
+ /* 그리드 배경 패턴 */
+ .k-grid-h181-bg {
+ background-image: repeating-linear-gradient(0deg, rgba(124, 58, 237, 0.08) 0px, rgba(124, 58, 237, 0.08) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, rgba(124, 58, 237, 0.08) 0px, rgba(124, 58, 237, 0.08) 1px, transparent 1px, transparent 40px);
+ }
+ /* 루트 뱃 */
+ .v-foot-aoyx {
+ display: flex;
+ gap: 14px;
+ align-items: center;
+ margin: 32px 0 24px;
+ }
+ .v-foot-aoyx-square {
+ width: 20px;
+ height: 20px;
+ background: #7c3aed;
+ }
+ .v-foot-aoyx-text {
+ font-family: 'Barlow Condensed', sans-serif;
+ font-weight: 700;
+ letter-spacing: 0.12em;
+ font-size: 1.1rem;
+ color: #f2f2ff;
+ text-transform: uppercase;
+ }
+ /* 4컬럼 */
+ .k-grid-h181-4 {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 28px;
+ margin: 48px 0;
+ }
+ .k-grid-h181-4 div {
+ border-left: 2px solid #7c3aed;
+ padding-left: 16px;
+ font-size: 0.9rem;
+ color: #b0b0d0;
+ }
+ .k-grid-h181-4 div strong {
+ display: block;
+ font-family: 'Barlow Condensed', sans-serif;
+ font-size: 1.4rem;
+ color: #fff;
+ margin-bottom: 6px;
+ }
+ @media (max-width: 768px) {
+ .k-grid-h181-4 {
+ grid-template-columns: repeat(2, 1fr);
+ }
+ }
+ /* 비대칭 분할 */
+ .r-body-p5g4 {
+ display: grid;
+ grid-template-columns: 1.4fr 1fr;
+ gap: 48px;
+ padding: 72px 0;
+ align-items: start;
+ }
+ .r-body-p5g4 .m-side-yxgr {
+ border-right: 1px solid #2a2a3a;
+ padding-right: 36px;
+ }
+ @media (max-width: 768px) {
+ .r-body-p5g4 {
+ grid-template-columns: 1fr;
+ }
+ .r-body-p5g4 .m-side-yxgr {
+ border-right: none;
+ padding-right: 0;
+ }
+ }
+ /* 타임라인 */
+ .m-hero-sjo6 {
+ position: relative;
+ padding-left: 30px;
+ margin: 48px 0;
+ }
+ .m-hero-sjo6::before {
+ content: '';
+ position: absolute;
+ left: 8px;
+ top: 0;
+ bottom: 0;
+ width: 2px;
+ background: #7c3aed;
+ }
+ .m-hero-sjo6-item {
+ position: relative;
+ margin-bottom: 36px;
+ padding-bottom: 12px;
+ }
+ .m-hero-sjo6-item::before {
+ content: '';
+ position: absolute;
+ left: -26px;
+ top: 4px;
+ width: 10px;
+ height: 10px;
+ background: #07070e;
+ border: 2px solid #7c3aed;
+ border-radius: 50%;
+ }
+ .m-hero-sjo6-item h4 {
+ font-family: 'Barlow Condensed', sans-serif;
+ font-size: 1.3rem;
+ color: #fff;
+ margin-bottom: 4px;
+ }
+ /* FAQ */
+ .t-side-ujb0 dt {
+ font-weight: 700;
+ color: #fff;
+ margin-top: 28px;
+ font-size: 1.15rem;
+ border-left: 3px solid #7c3aed;
+ padding-left: 14px;
+ }
+ .t-side-ujb0 dd {
+ margin-left: 17px;
+ margin-top: 8px;
+ color: #c4c4e0;
+ }
+ /* 푸터 */
+ .r-nav-pokx {
+ border-top: 1px solid #2a2a3a;
+ padding: 36px 0 24px;
+ font-size: 0.85rem;
+ color: #888;
+ margin-top: 80px;
+ }
+ .r-nav-pokx .author-block {
+ margin-bottom: 24px;
+ color: #b0b0d0;
+ }
+ .r-nav-pokx .author-block strong {
+ color: #fff;
+ font-size: 1rem;
+ }
+ /* 중복 래퍼 */
+ .wrapper-8x2kLm9 {
+ border: none;
+ }
+ /* 기타 */
+ section {
+ padding: 80px 0;
+ }
+ @media (max-width: 768px) {
+ section {
+ padding: 40px 0;
+ }
+ }
+ .t-list-xfna {
+ display: inline-block;
+ background: transparent;
+ border: 2px solid #7c3aed;
+ color: #f2f2ff;
+ padding: 12px 28px;
+ border-radius: 20px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ font-family: 'Barlow Condensed', sans-serif;
+ text-decoration: none;
+ transition: 0.25s;
+ }
+ .t-list-xfna:hover {
+ background: #7c3aed;
+ color: #fff;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b05-yn-karaoke-real2-1">
+  <meta property="og:description" content="t3b05-yn-karaoke-real2-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://yeonnam-song-choice.node-link.shop/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="v-ico-951n">
+ <nav class="v-foot-1nss">
+ <a href="/" class="v-ico-0o3k">연남 찐후기</a>
+ <button class="n-body-i3ji" onclick="document.querySelector('.m-top-34wz').classList.toggle('active')">
+ <span></span><span></span><span></span>
+ </button>
+ <div class="m-top-34wz">
+ <a href="#info">정보</a>
+ <a href="#check">체크리스트</a>
+ <a href="#faq">FAQ</a>
+ </div>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 39개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0188.html">연남 가라오케 찐후기 공덕 셔츠룸, 현명한 선택을 위한 업체 비교 기준</a>
+        <p class="post-item__summary">공덕 지역에서 셔츠룸을 방문하려 할 때, 어떤 점을 가장 중요하게 생각하시나요? 단순히 가까운 곳을 선택하거나 가격만 보고 결정한다면 만족도가 떨어질 수 있습니다. 제대로 된 경험을 위해서는 여러 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0189.html">연남 가라오케 찐후기 확인하고 고르는 연남 유흥 추천정보 가이드</a>
+        <p class="post-item__summary">연남동 일대에서 즐길 거리를 찾다 보면 소위 연남 가라오케 찐후기라는 정보를 접하게 됩니다. 하지만 홍수처럼 쏟아지는 정보 속에서 무엇이 진짜인지 가려내는 것은 쉽지 않습니다. 현명한 선택을 위해 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0190.html">연남 가라오케 찐후기 비교하며 찾는 마곡 가라오케 추천정보 판단법</a>
+        <p class="post-item__summary">인터넷에서 연남 가라오케 찐후기를 찾아보시는 분들은 보통 만족스러운 서비스를 원하실 겁니다. 이와 마찬가지로 마곡 지역에서도 질 좋은 시설을 고르기 위해 두 가지 선택지를 대조해 보는 지혜가 필요합</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0191.html">연남 가라오케 찐후기 살펴보며 주의할 마곡 유흥 추천정보 예약법</a>
+        <p class="post-item__summary">연남 가라오케 찐후기를 분석하다 보면 대부분 비슷한 실패 지점에 도달하게 됩니다. 많은 분이 제대로 된 사전 정보 없이 예약했다가 현장에서 당황하는 경우가 많습니다. 특히 예약 단계에서의 불확실성을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0192.html">연남 가라오케 찐후기 챙기며 확인하는 합정 노래방 추천정보 리스트</a>
+        <p class="post-item__summary">연남 가라오케 찐후기를 보면서 여러분은 어떤 것을 가장 중요하게 생각하시나요. 장소의 위치나 접근성은 성공적인 모임을 위한 가장 기초적인 체크리스트 항목입니다. 합정 지역에서 노래방을 고를 때 반드</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0193.html">연남 가라오케 찐후기 경험담으로 알아보는 연남 클럽 추천정보</a>
+        <p class="post-item__summary">주말 저녁 평소 자주 찾던 연남 가라오케 찐후기 글들을 읽고 호기심에 무작정 거리를 나섰던 경험이 있습니다. 생각보다 북적이는 인파에 어디로 들어가야 할지 고민하다가 입구에서 한참을 서성였던 기억이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0194.html">연남 가라오케 찐후기 분석으로 살펴보는 합정 셔츠룸 추천정보</a>
+        <p class="post-item__summary">많은 분이 셔츠룸이라고 하면 무조건 밤늦은 시간에만 가능하다고 오해하는 경우가 많습니다. 연남 가라오케 찐후기 등을 보며 정보를 얻으려 노력하지만 잘못된 정보로 인해 시간대를 놓치기도 합니다. 실제</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0195.html">연남 가라오케 찐후기 참고하여 정리한 공덕 가라오케 추천정보</a>
+        <p class="post-item__summary">좋은 가라오케를 찾기 위해서는 여러 조건이 충족되어야 합니다. 연남 가라오케 찐후기 경험을 바탕으로 공덕 지역의 시설을 비교해 볼 때 가장 먼저 확인할 것은 공간의 독립성입니다. 프라이빗한 대화를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0196.html">연남 가라오케 찐후기 읽고 상수 마사지 추천정보 활용하기</a>
+        <p class="post-item__summary">혹시 평소 피로가 쌓여 휴식이 필요하다고 느낀 적은 없으신가요? 연남 가라오케 찐후기 정보를 살피듯 상수 지역의 릴랙스 공간을 찾으시는 분들이 많습니다. 자신에게 맞는 서비스를 찾기 위해서는 명확한</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0197.html">연남 가라오케 찐후기 활용한 망원 노래방 추천정보 탐색법</a>
+        <p class="post-item__summary">최근 온라인 커뮤니티에 올라오는 연남 가라오케 찐후기는 무분별한 광고가 섞여 있어 옥석을 가려내는 안목이 필요합니다. 방문객들이 작성한 글의 진위 여부를 판단하기 위해서는 우선 업체의 사진이 최근 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0198.html">연남 가라오케 찐후기 분석을 통한 홍대 노래방 추천정보 비교</a>
+        <p class="post-item__summary">연남 가라오케 찐후기를 읽다 보면 많은 사람이 가격 책정 방식에 대해 혼란을 겪는다는 점을 발견하게 됩니다. 홍대 지역의 수많은 선택지 중에서 나에게 맞는 곳을 고르려면 정액제 방식과 시간제 방식을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-owwxh6.html">가라오케 단위 서비스의 원가와 마진 분석</a>
+        <p class="post-item__summary">백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: aga-clinic.space</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">연남 가라오케 찐후기 지역 정보</a>
+        <p class="post-item__summary">연남 지역에 위치한 노래방을 이용하기 전에 지역 정보를 파악하는 것은 중요합니다. 해당 지역의 주요 시설과 접근성을 미리 알아두면 효율적으로 시간을 활용할 수 있습니다. 일반적으로 지역 정보는 공식</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">연남 가라오케 찐후기 정보</a>
+        <p class="post-item__summary">연남 지역에는 다양한 노래방이 위치해 있으며, 이용자별로 선호하는 공간의 특성은 모두 다릅니다. 일부 공간은 조용하고 쾌적한 분위기를 중요시하는 편이고, 다른 곳은 음향 장비의 성능이나曲 목록의 다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">연남 가라오케 찐후기 정보 안내</a>
+        <p class="post-item__summary">연남 지역에서는 다양한 여가 활동 중에서도 특히 노래방을 찾는 분들이 많습니다. 친구들과의 담소를 나누거나 업무 후 피로를 풀며 즐거운 시간을 보내기 위해 가라오케를 이용하는 경우가 흔하며, 이는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">연남 가라오케 찐후기</a>
+        <p class="post-item__summary">연남동은 젊고 문화적인 분위기가 돋보이는 지역으로, 다양한 감성을 담은 노래방을 즐기는 사람들이 꾸준히 찾고 있습니다. 이곳에서는 단순한 음률 체험을 넘어, 편안한 공간과 독특한 인테리어를 결합한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">연남 가라오케 찐후기 안내</a>
+        <p class="post-item__summary">연남 지역은 젊은 층이 많이 거주하고 있어 다양한 노래방과 노래 교실, 그리고 가라오케 공간이 밀집해 있습니다. 이 지역에 대해 알아보는 이유는 최신 트렌드를 반영한 시설들이 많이 들어서 있기 때문</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-1s67j5c.html">연남 가라오케 이용 시 반드시 체크해야 할 시간대별 전략</a>
+        <p class="post-item__summary">연남 가라오케를 처음 가보려는 사람이 시스템을 잘 몰라서 물어보는 경우가 많은데 대충 눈치껏 파악한 효율적인 이용법을 정리한다. 일단 입구에서부터 쭈뼛거리면 시간 낭비가 심하다. 보통 연남 쪽 매장</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001.html">연남 가라오케? 내가 3개월 굴려본 썰 풀어봄. 월 3천 찍고도 접었다니까?</a>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
